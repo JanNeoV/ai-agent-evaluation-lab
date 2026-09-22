@@ -64,4 +64,4 @@ Read the [methodology overview](docs/methodology.md) and [canonical results](doc
 
 ## License and citation
 
-No software license has been declared in this repository. The absence of a license does not grant reuse rights; see [citation guidance](CITATION.cff) and contact the maintainers before redistributing or incorporating the code.
+This project is released under the [MIT License](LICENSE). See [citation guidance](CITATION.cff) when referencing the software or published experiment results.

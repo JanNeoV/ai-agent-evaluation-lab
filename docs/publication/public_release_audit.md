@@ -25,7 +25,7 @@ Task records, the generated task history, the detailed Snowflake retry diary, an
 
 - No credentials, tokens, or private keys are intended to be tracked. The Snowflake profile example contains placeholders only; the public CLI does not load `.env` files.
 - Historical records use redaction markers where account or user fields are necessary to interpret the record; these markers are not live identifiers.
-- Citation metadata uses a neutral repository placeholder until a public repository URL is selected.
+- Citation metadata points to the public repository at `https://github.com/JanNeoV/agent-evaluation-lab`.
 - The public repository starts with fresh Git history, so disclosures from the internal repository's history are not inherited.
 - Task diaries and task history are excluded from the public repository.
 
@@ -39,7 +39,7 @@ The [article fact sheet](article_fact_sheet.md) is the authoritative source for 
 
 Validation results for this cleanup are recorded in the final change summary and may be repeated using the commands in [local validation](../validation.md). CI runs offline checks only and does not invoke Snowflake or Cortex.
 
-## Open release decisions
+## Release metadata
 
-- No software license is declared. A maintainer must select and document a license before presenting this repository as open source or granting reuse rights.
+- The software is released under the MIT License.
 - No `SECURITY.md` is provided because a verified private vulnerability-reporting channel has not been configured.
