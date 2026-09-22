@@ -65,3 +65,5 @@ Read the [methodology overview](docs/methodology.md) and [canonical results](doc
 ## License and citation
 
 This project is released under the [MIT License](LICENSE). See [citation guidance](CITATION.cff) when referencing the software or published experiment results.
+
+The public repository is [JanNeoV/ai-agent-evaluation-lab](https://github.com/JanNeoV/ai-agent-evaluation-lab).

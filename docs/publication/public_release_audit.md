@@ -25,7 +25,7 @@ Task records, the generated task history, the detailed Snowflake retry diary, an
 
 - No credentials, tokens, or private keys are intended to be tracked. The Snowflake profile example contains placeholders only; the public CLI does not load `.env` files.
 - Historical records use redaction markers where account or user fields are necessary to interpret the record; these markers are not live identifiers.
-- Citation metadata points to the public repository at `https://github.com/JanNeoV/agent-evaluation-lab`.
+- Citation metadata points to the public repository at `https://github.com/JanNeoV/ai-agent-evaluation-lab`.
 - The public repository starts with fresh Git history, so disclosures from the internal repository's history are not inherited.
 - Task diaries and task history are excluded from the public repository.
 
