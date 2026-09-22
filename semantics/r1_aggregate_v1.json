@@ -1,0 +1,187 @@
+{
+  "version": "r1.aggregate.v1",
+  "entities": [
+    {
+      "name": "p2_core_edition",
+      "grain": "one observed edition of one approved P2 CORE event-distance series",
+      "primary_key": [
+        "series_id",
+        "event_year"
+      ],
+      "fixed_scope": {
+        "series": 4,
+        "observed_editions": 40,
+        "external_replication": false
+      }
+    }
+  ],
+  "relationships": [],
+  "dimensions": [
+    {
+      "name": "series_id",
+      "type": "string"
+    },
+    {
+      "name": "event",
+      "type": "string"
+    },
+    {
+      "name": "festival_id",
+      "type": "string"
+    },
+    {
+      "name": "state",
+      "type": "string"
+    },
+    {
+      "name": "distance",
+      "type": "string"
+    },
+    {
+      "name": "event_year",
+      "type": "integer"
+    },
+    {
+      "name": "era",
+      "type": "string",
+      "interpretation": "descriptive period label only; not a causal treatment"
+    }
+  ],
+  "measures": [
+    {
+      "name": "eligible_finishers",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "sex_recorded",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "sex_missing",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "sex_completeness",
+      "type": "decimal",
+      "aggregation": "ratio_of_sums"
+    },
+    {
+      "name": "female_count",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "male_count",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "other_sex_count",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "female_share_known",
+      "type": "decimal",
+      "aggregation": "sum(female_count)/sum(sex_recorded)"
+    },
+    {
+      "name": "age_recorded",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "age_missing",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "age_completeness",
+      "type": "decimal",
+      "aggregation": "ratio_of_sums"
+    },
+    {
+      "name": "age_year_difference_count",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "mean_age_year_difference",
+      "type": "decimal",
+      "aggregation": "not_additive"
+    },
+    {
+      "name": "median_age_year_difference",
+      "type": "decimal",
+      "aggregation": "not_additive"
+    },
+    {
+      "name": "age_band_mappable",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "age_band_unmapped",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "age_band_mapping_completeness",
+      "type": "decimal",
+      "aggregation": "ratio_of_sums"
+    },
+    {
+      "name": "age_under_30_count",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "age_30_49_count",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "age_50_plus_count",
+      "type": "integer",
+      "aggregation": "sum"
+    },
+    {
+      "name": "share_under_30_mapped",
+      "type": "decimal",
+      "aggregation": "ratio_of_sums"
+    },
+    {
+      "name": "share_30_49_mapped",
+      "type": "decimal",
+      "aggregation": "ratio_of_sums"
+    },
+    {
+      "name": "share_50_plus_mapped",
+      "type": "decimal",
+      "aggregation": "ratio_of_sums"
+    }
+  ],
+  "null_policy": "Empty approved decimal fields load as NULL. A zero is retained only when the approved aggregate explicitly records zero; missing or unmappable values are never imputed as zero.",
+  "descriptions": {
+    "scope": "Four purposively selected source-rich P2 CORE series and 40 observed editions only.",
+    "calendar_gaps": "Absent years are not rows and cannot be interpreted as cancellation or zero participation.",
+    "denominator": "Edition count, not finisher volume, is the finite observation count for across-edition claims.",
+    "claims": "Descriptive within-scope analysis only; no national, Bavaria-wide, population, participant-level, external-replication, or causal inference."
+  },
+  "synonyms": {
+    "edition": [
+      "Austragung",
+      "beobachtete Ausgabe"
+    ],
+    "eligible_finishers": [
+      "auswertbare Finisherzahl"
+    ],
+    "female_share_known": [
+      "Frauenanteil unter bekanntem Geschlecht"
+    ]
+  },
+  "train_examples": []
+}

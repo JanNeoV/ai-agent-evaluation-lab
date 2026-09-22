@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:model_binding",
+  "type": "object",
+  "properties": {
+    "component": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reported_model": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reported_revision": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "routing_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "region": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pinning_level": {
+      "type": "string",
+      "enum": [
+        "revision",
+        "named_model",
+        "managed_unknown"
+      ]
+    }
+  },
+  "required": [
+    "component",
+    "provider",
+    "requested_model",
+    "reported_model",
+    "reported_revision",
+    "routing_policy",
+    "parameters",
+    "region",
+    "pinning_level"
+  ],
+  "additionalProperties": false
+}

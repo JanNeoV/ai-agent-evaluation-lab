@@ -1,0 +1,27 @@
+# Exact installed dependency snapshot: Windows, Python 3.12.10.
+# Local/runtime/dev only; optional Snowflake connector must be locked when configured.
+# Regenerate only through an explicit dependency-update task.
+ast_serialize==0.9.0
+attrs==25.4.0
+cffi==2.0.0
+colorama==0.4.6
+cryptography==46.0.3
+duckdb==1.5.0
+iniconfig==2.3.0
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+librt==0.15.0
+mypy==2.3.1
+mypy_extensions==1.1.0
+packaging==25.0
+pathspec==1.1.1
+pip==26.2
+pluggy==1.6.0
+pycparser==2.23
+Pygments==2.19.2
+pytest==8.4.2
+referencing==0.37.0
+rpds-py==0.28.0
+ruff==0.16.6
+setuptools==82.0.1
+typing_extensions==4.15.0

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:question",
+  "type": "object",
+  "properties": {
+    "question_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "leakage_group_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "de",
+        "en"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "lookup",
+        "aggregation",
+        "temporal",
+        "ranking_ratio",
+        "missingness",
+        "scope_provenance"
+      ]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "critical": {
+      "type": "boolean"
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "TRAIN",
+        "TEST",
+        "HOLDOUT"
+      ]
+    },
+    "origin": {
+      "type": "string",
+      "enum": [
+        "stakeholder",
+        "authored",
+        "synthetic_fixture",
+        "synthetic_augmentation"
+      ]
+    }
+  },
+  "required": [
+    "question_id",
+    "intent_id",
+    "leakage_group_id",
+    "language",
+    "text",
+    "category",
+    "difficulty",
+    "critical",
+    "split",
+    "origin"
+  ],
+  "additionalProperties": false
+}

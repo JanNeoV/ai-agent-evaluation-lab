@@ -1,0 +1,22 @@
+{
+  "template_only": true,
+  "experiment_id": "EXP-0001",
+  "classification": "prospective_procedurally_sealed",
+  "repetitions": 2,
+  "automatic_retries": 0,
+  "schedule_seed": 20260919,
+  "language": "de",
+  "translations_scored": false,
+  "benchmark_manifest": "FILL_WITH_APPROVED_RELEASE_HASH",
+  "train_questions_sha256": "FILL_WITH_TRAIN_PAYLOAD_HASH",
+  "git_commit": "FILL_WITH_COMMITTED_CODE_REVISION",
+  "dependency_lock_sha256": "FILL_WITH_LOCK_HASH",
+  "evaluation_spec_sha256": "FILL_WITH_FROZEN_RUBRIC_AND_GATE_HASH",
+  "sealed_payloads": {
+    "TEST": "FILL_WITH_CIPHERTEXT_HASH",
+    "HOLDOUT": "FILL_WITH_CIPHERTEXT_HASH"
+  },
+  "model_binding_ref": "OUTSIDE_DEVELOPER_CHECKOUT/model-binding.json",
+  "limits": {"request_deadline_seconds": 120, "orchestration_seconds": 60, "orchestration_tokens": 4096},
+  "budget": {"ceiling_usd": "10.00", "reserve_usd": "2.00"}
+}

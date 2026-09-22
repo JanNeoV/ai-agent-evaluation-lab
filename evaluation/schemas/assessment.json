@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:assessment",
+  "type": "object",
+  "properties": {
+    "invocation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metric": {
+      "type": "string",
+      "minLength": 1
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "assessor_type": {
+      "type": "string",
+      "enum": [
+        "deterministic",
+        "human",
+        "native_judge",
+        "synthetic_fixture"
+      ]
+    },
+    "evaluator_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "final",
+        "superseded"
+      ]
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "invocation_id",
+    "metric",
+    "value",
+    "assessor_type",
+    "evaluator_version",
+    "evidence_refs",
+    "status",
+    "recorded_at"
+  ],
+  "additionalProperties": false
+}

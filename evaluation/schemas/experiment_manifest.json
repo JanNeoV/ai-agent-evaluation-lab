@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:experiment_manifest",
+  "type": "object",
+  "properties": {
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "synthetic_fixture",
+        "prospective_procedurally_sealed"
+      ]
+    },
+    "frozen_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "git_commit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dependency_lock_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "benchmark_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "evaluation_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "candidates": {
+      "type": "object",
+      "minProperties": 2,
+      "maxProperties": 3,
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "schedule_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "environment": {
+      "type": "object"
+    },
+    "budget": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "experiment_id",
+    "schema_version",
+    "classification",
+    "frozen_at",
+    "git_commit",
+    "dependency_lock_sha256",
+    "benchmark_sha256",
+    "evaluation_sha256",
+    "candidates",
+    "schedule_sha256",
+    "environment",
+    "budget"
+  ],
+  "additionalProperties": false
+}

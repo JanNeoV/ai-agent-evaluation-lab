@@ -1,0 +1,15 @@
+{
+  "release_id": "SYNTHETIC-001",
+  "schema_version": "1.0",
+  "classification": "synthetic_fixture",
+  "publication_disposition": "synthetic_only",
+  "files": {
+    "data.json": "08142a8275ffb76a6ef312d86cd04869093cf03499f8bfac003146f9697e9565",
+    "questions.json": "88a978a0833663db2a8a9749ac390e9ad672ffda2c8f479a2d7911736a3f0359",
+    "ground_truth.json": "cc90b5baea4aef62e4ca18f2b40006519e5b19cb10b662da837b5f3611110a29"
+  },
+  "selection_rule_sha256": "a241f24cbba48a61668a04234986e872764537851e5463128df3d0c07c519d9c",
+  "source_snapshot_refs": [],
+  "frozen_at": "2026-09-19T00:00:00Z",
+  "review_ref": null
+}

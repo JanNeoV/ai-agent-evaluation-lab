@@ -1,0 +1,10 @@
+# Copy this profile into the user-level Snowflake connector connections.toml.
+# Replace placeholders locally. Do not commit real account or credential values.
+[lab_profile]
+account = "your_account_identifier"
+user = "your_user_name"
+authenticator = "externalbrowser"
+role = "LAB_RUNTIME"
+warehouse = "LAB_XS"
+database = "AGENT_LAB"
+schema = "BENCHMARK_R1"

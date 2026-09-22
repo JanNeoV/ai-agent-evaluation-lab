@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:split_assignment",
+  "type": "object",
+  "properties": {
+    "benchmark_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "TRAIN",
+        "TEST",
+        "HOLDOUT"
+      ]
+    },
+    "grouping_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "assignment_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "frozen_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "intent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "leakage_group_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "translation_group_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "paraphrase_group_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entity_substitution_group_id": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "benchmark_id",
+    "question_id",
+    "split",
+    "grouping_version",
+    "seed",
+    "assignment_sha256",
+    "frozen_at"
+  ],
+  "additionalProperties": false
+}

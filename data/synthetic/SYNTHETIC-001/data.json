@@ -1,0 +1,570 @@
+{
+  "event": [
+    {
+      "race_id": "SYN-1",
+      "display_name": "Fiktiver See",
+      "identity_basis": "synthetic_fixture",
+      "source_identity_ref": "FIX-1"
+    },
+    {
+      "race_id": "SYN-2",
+      "display_name": "Fiktiver Wald",
+      "identity_basis": "synthetic_fixture",
+      "source_identity_ref": "FIX-2"
+    },
+    {
+      "race_id": "SYN-3",
+      "display_name": "Fiktive Stadt",
+      "identity_basis": "synthetic_fixture",
+      "source_identity_ref": "FIX-3"
+    },
+    {
+      "race_id": "SYN-4",
+      "display_name": "Fiktiver Berg",
+      "identity_basis": "synthetic_fixture",
+      "source_identity_ref": "FIX-4"
+    }
+  ],
+  "event_year": [
+    {
+      "race_id": "SYN-1",
+      "event_year": 2021,
+      "state_code": "DE-BW",
+      "scheduled": true,
+      "held": true,
+      "abnormal_termination": null,
+      "status_flags": [
+        "held"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-1",
+      "event_year": 2022,
+      "state_code": "DE-BW",
+      "scheduled": true,
+      "held": null,
+      "abnormal_termination": null,
+      "status_flags": [
+        "scheduled_unknown"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-1",
+      "event_year": 2023,
+      "state_code": "DE-BW",
+      "scheduled": true,
+      "held": true,
+      "abnormal_termination": null,
+      "status_flags": [
+        "held"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-2",
+      "event_year": 2021,
+      "state_code": "DE-BW",
+      "scheduled": true,
+      "held": false,
+      "abnormal_termination": null,
+      "status_flags": [
+        "cancelled_temporarily"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-2",
+      "event_year": 2022,
+      "state_code": "DE-BW",
+      "scheduled": true,
+      "held": true,
+      "abnormal_termination": null,
+      "status_flags": [
+        "held"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-2",
+      "event_year": 2023,
+      "state_code": "DE-BW",
+      "scheduled": true,
+      "held": true,
+      "abnormal_termination": null,
+      "status_flags": [
+        "held"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-3",
+      "event_year": 2021,
+      "state_code": "DE-SH",
+      "scheduled": true,
+      "held": null,
+      "abnormal_termination": null,
+      "status_flags": [
+        "scheduled_unknown"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-3",
+      "event_year": 2023,
+      "state_code": "DE-SH",
+      "scheduled": true,
+      "held": true,
+      "abnormal_termination": null,
+      "status_flags": [
+        "held"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-4",
+      "event_year": 2021,
+      "state_code": "DE-SH",
+      "scheduled": null,
+      "held": null,
+      "abnormal_termination": null,
+      "status_flags": [
+        "unknown"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-4",
+      "event_year": 2022,
+      "state_code": "DE-SH",
+      "scheduled": true,
+      "held": false,
+      "abnormal_termination": null,
+      "status_flags": [
+        "cancelled_temporarily"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    },
+    {
+      "race_id": "SYN-4",
+      "event_year": 2023,
+      "state_code": "DE-SH",
+      "scheduled": true,
+      "held": true,
+      "abnormal_termination": true,
+      "status_flags": [
+        "held"
+      ],
+      "identity_review_state": "synthetic_fixture"
+    }
+  ],
+  "coverage": [
+    {
+      "state_code": "DE-BW",
+      "event_year": 2021,
+      "calendar_coverage": "partial",
+      "held_verification_coverage": "partial",
+      "exit_coverage": "unknown",
+      "participant_coverage": "unknown",
+      "price_coverage": "unknown",
+      "coverage_note": "Synthetic software fixture only"
+    },
+    {
+      "state_code": "DE-BW",
+      "event_year": 2022,
+      "calendar_coverage": "partial",
+      "held_verification_coverage": "partial",
+      "exit_coverage": "unknown",
+      "participant_coverage": "unknown",
+      "price_coverage": "unknown",
+      "coverage_note": "Synthetic software fixture only"
+    },
+    {
+      "state_code": "DE-BW",
+      "event_year": 2023,
+      "calendar_coverage": "partial",
+      "held_verification_coverage": "partial",
+      "exit_coverage": "unknown",
+      "participant_coverage": "unknown",
+      "price_coverage": "unknown",
+      "coverage_note": "Synthetic software fixture only"
+    },
+    {
+      "state_code": "DE-SH",
+      "event_year": 2021,
+      "calendar_coverage": "partial",
+      "held_verification_coverage": "partial",
+      "exit_coverage": "unknown",
+      "participant_coverage": "unknown",
+      "price_coverage": "unknown",
+      "coverage_note": "Synthetic software fixture only"
+    },
+    {
+      "state_code": "DE-SH",
+      "event_year": 2022,
+      "calendar_coverage": "partial",
+      "held_verification_coverage": "partial",
+      "exit_coverage": "unknown",
+      "participant_coverage": "unknown",
+      "price_coverage": "unknown",
+      "coverage_note": "Synthetic software fixture only"
+    },
+    {
+      "state_code": "DE-SH",
+      "event_year": 2023,
+      "calendar_coverage": "partial",
+      "held_verification_coverage": "partial",
+      "exit_coverage": "unknown",
+      "participant_coverage": "unknown",
+      "price_coverage": "unknown",
+      "coverage_note": "Synthetic software fixture only"
+    }
+  ],
+  "source": [
+    {
+      "source_id": "SRC-1-2021-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2021-12-31",
+      "public_locator": null,
+      "source_fingerprint": "4981dbbcb600b286242418f3c2d2827b7d4a53eb4e75a9dbf24abae79b23892c",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-1-2021-held",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_result",
+      "publication_date": "2021-12-31",
+      "public_locator": null,
+      "source_fingerprint": "a8c9528954e1ab705c6fef88b206853370d02f560f00d0c80314567f3292278d",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-1-2022-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2022-12-31",
+      "public_locator": null,
+      "source_fingerprint": "ceb1e5634bf2c5b3392e899248f76a22b30c96fd3bb881e58bca49225e8e8963",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-1-2023-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2023-12-31",
+      "public_locator": null,
+      "source_fingerprint": "9850cbda62b682707a12ced0ac881401cb3c398967dd427ef91da37587fb2176",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-1-2023-held",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_result",
+      "publication_date": "2023-12-31",
+      "public_locator": null,
+      "source_fingerprint": "1a4c27ae493aaa2f0233409bfe647c8f6439a127f39f09436bfd728f864a911b",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-2-2021-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2021-12-31",
+      "public_locator": null,
+      "source_fingerprint": "048fc64e6e932555fc43cf254aee647f1c08e1b222a6e905997f134c2cb88073",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-2-2021-held",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_result",
+      "publication_date": "2021-12-31",
+      "public_locator": null,
+      "source_fingerprint": "9d59705322707c9d504c5ef1cf3ff123dbaf9315fac8b2ceb2935a36b312b22a",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-2-2022-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2022-12-31",
+      "public_locator": null,
+      "source_fingerprint": "bc8c481ea221b0e90871353f092ef6d6d1c6745e151991e0008d1c54597c153e",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-2-2022-held",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_result",
+      "publication_date": "2022-12-31",
+      "public_locator": null,
+      "source_fingerprint": "1a75c1bd36e2e73e56b77fdadea5e4d35e2dc570ccb5995ae0ebd27434c04cf6",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-2-2023-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2023-12-31",
+      "public_locator": null,
+      "source_fingerprint": "e857d282b68c110b32e38b25f7e296ce9e63db7b8af13f9dc407520f2eeb2491",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-2-2023-held",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_result",
+      "publication_date": "2023-12-31",
+      "public_locator": null,
+      "source_fingerprint": "fb46e18921b71fe598a9903fe937889512a577da0bdded6056aa6897a27632cf",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-3-2021-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2021-12-31",
+      "public_locator": null,
+      "source_fingerprint": "e1bf002ad4ec02b8defb0e4a026443f04559c8c357e08feb016710b1d122b9cc",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-3-2023-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2023-12-31",
+      "public_locator": null,
+      "source_fingerprint": "3b79f4b04e24f9b0be411986eb286ce013310a221cf7649c0ed73d4e4e40aaba",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-3-2023-held",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_result",
+      "publication_date": "2023-12-31",
+      "public_locator": null,
+      "source_fingerprint": "87d9ae11010e508c1f180e98de965e35de1bd94f5cc2802653e5efd502e4b640",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-4-2022-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2022-12-31",
+      "public_locator": null,
+      "source_fingerprint": "797cdf26370b89fb32fa7af236c8dd615c166796e1e27c4fb7cf071c1f0e1693",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-4-2022-held",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_result",
+      "publication_date": "2022-12-31",
+      "public_locator": null,
+      "source_fingerprint": "49ff547284cc3f47141bc25ec923f97d7ae26fc889a179c888365f776c125774",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-4-2023-scheduled",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_calendar",
+      "publication_date": "2023-12-31",
+      "public_locator": null,
+      "source_fingerprint": "4ba69a86bf205c5c6fe1daff5602280e8f7e56331f6f4fbfdab5a1a381ed0cb5",
+      "redistribution_disposition": "synthetic_only"
+    },
+    {
+      "source_id": "SRC-4-2023-held",
+      "citation": "Invented software fixture",
+      "source_kind": "synthetic_result",
+      "publication_date": "2023-12-31",
+      "public_locator": null,
+      "source_fingerprint": "41bdedf95c99f54252231e5af47f5b4309f8c1a4492f5db6fd48345b165e4c70",
+      "redistribution_disposition": "synthetic_only"
+    }
+  ],
+  "observation_source": [
+    {
+      "evidence_id": "E-1-2021-scheduled",
+      "race_id": "SYN-1",
+      "event_year": 2021,
+      "field_name": "scheduled",
+      "source_id": "SRC-1-2021-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-1-2021-held",
+      "race_id": "SYN-1",
+      "event_year": 2021,
+      "field_name": "held",
+      "source_id": "SRC-1-2021-held",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-1-2022-scheduled",
+      "race_id": "SYN-1",
+      "event_year": 2022,
+      "field_name": "scheduled",
+      "source_id": "SRC-1-2022-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-1-2023-scheduled",
+      "race_id": "SYN-1",
+      "event_year": 2023,
+      "field_name": "scheduled",
+      "source_id": "SRC-1-2023-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-1-2023-held",
+      "race_id": "SYN-1",
+      "event_year": 2023,
+      "field_name": "held",
+      "source_id": "SRC-1-2023-held",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-2-2021-scheduled",
+      "race_id": "SYN-2",
+      "event_year": 2021,
+      "field_name": "scheduled",
+      "source_id": "SRC-2-2021-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-2-2021-held",
+      "race_id": "SYN-2",
+      "event_year": 2021,
+      "field_name": "held",
+      "source_id": "SRC-2-2021-held",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-2-2022-scheduled",
+      "race_id": "SYN-2",
+      "event_year": 2022,
+      "field_name": "scheduled",
+      "source_id": "SRC-2-2022-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-2-2022-held",
+      "race_id": "SYN-2",
+      "event_year": 2022,
+      "field_name": "held",
+      "source_id": "SRC-2-2022-held",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-2-2023-scheduled",
+      "race_id": "SYN-2",
+      "event_year": 2023,
+      "field_name": "scheduled",
+      "source_id": "SRC-2-2023-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-2-2023-held",
+      "race_id": "SYN-2",
+      "event_year": 2023,
+      "field_name": "held",
+      "source_id": "SRC-2-2023-held",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-3-2021-scheduled",
+      "race_id": "SYN-3",
+      "event_year": 2021,
+      "field_name": "scheduled",
+      "source_id": "SRC-3-2021-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-3-2023-scheduled",
+      "race_id": "SYN-3",
+      "event_year": 2023,
+      "field_name": "scheduled",
+      "source_id": "SRC-3-2023-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-3-2023-held",
+      "race_id": "SYN-3",
+      "event_year": 2023,
+      "field_name": "held",
+      "source_id": "SRC-3-2023-held",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-4-2022-scheduled",
+      "race_id": "SYN-4",
+      "event_year": 2022,
+      "field_name": "scheduled",
+      "source_id": "SRC-4-2022-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-4-2022-held",
+      "race_id": "SYN-4",
+      "event_year": 2022,
+      "field_name": "held",
+      "source_id": "SRC-4-2022-held",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-4-2023-scheduled",
+      "race_id": "SYN-4",
+      "event_year": 2023,
+      "field_name": "scheduled",
+      "source_id": "SRC-4-2023-scheduled",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    },
+    {
+      "evidence_id": "E-4-2023-held",
+      "race_id": "SYN-4",
+      "event_year": 2023,
+      "field_name": "held",
+      "source_id": "SRC-4-2023-held",
+      "relation": "supports",
+      "source_locator": "fixture",
+      "review_ref": "SYNTHETIC-NOT-HUMAN-RESEARCH-REVIEW"
+    }
+  ]
+}

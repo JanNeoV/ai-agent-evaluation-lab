@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:evaluation_spec",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "comparator_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rubric_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "native_judge": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "repetitions": {
+      "const": 2
+    },
+    "schedule_seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missing_output_policy": {
+      "const": "unsuccessful"
+    },
+    "thresholds": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "version",
+    "comparator_version",
+    "rubric_sha256",
+    "native_judge",
+    "repetitions",
+    "schedule_seed",
+    "missing_output_policy",
+    "thresholds"
+  ],
+  "additionalProperties": false
+}

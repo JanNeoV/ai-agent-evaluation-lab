@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:r1_aggregate_row",
+  "type": "object",
+  "properties": {
+    "series_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event": {
+      "type": "string",
+      "minLength": 1
+    },
+    "festival_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "distance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "era": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_year": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "eligible_finishers": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sex_recorded": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sex_missing": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "female_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "male_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "other_sex_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "age_recorded": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "age_missing": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "age_year_difference_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "age_band_mappable": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "age_band_unmapped": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "age_under_30_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "age_30_49_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "age_50_plus_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sex_completeness": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "female_share_known": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "age_completeness": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "mean_age_year_difference": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "median_age_year_difference": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "age_band_mapping_completeness": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "share_under_30_mapped": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "share_30_49_mapped": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "share_50_plus_mapped": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "series_id",
+    "event",
+    "festival_id",
+    "state",
+    "distance",
+    "era",
+    "event_year",
+    "eligible_finishers",
+    "sex_recorded",
+    "sex_missing",
+    "female_count",
+    "male_count",
+    "other_sex_count",
+    "age_recorded",
+    "age_missing",
+    "age_year_difference_count",
+    "age_band_mappable",
+    "age_band_unmapped",
+    "age_under_30_count",
+    "age_30_49_count",
+    "age_50_plus_count",
+    "sex_completeness",
+    "female_share_known",
+    "age_completeness",
+    "mean_age_year_difference",
+    "median_age_year_difference",
+    "age_band_mapping_completeness",
+    "share_under_30_mapped",
+    "share_30_49_mapped",
+    "share_50_plus_mapped"
+  ],
+  "additionalProperties": false
+}

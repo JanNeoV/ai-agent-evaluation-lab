@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:usage_record",
+  "type": "object",
+  "properties": {
+    "scope_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "component": {
+      "type": "string",
+      "minLength": 1
+    },
+    "usd": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^\\d+(\\.\\d+)?$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "credits": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^\\d+(\\.\\d+)?$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "estimated",
+        "final",
+        "unknown"
+      ]
+    },
+    "attribution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rate_card_hash": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "scope_id",
+    "component",
+    "usd",
+    "credits",
+    "state",
+    "attribution",
+    "rate_card_hash"
+  ],
+  "additionalProperties": false
+}

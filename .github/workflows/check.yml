@@ -1,0 +1,22 @@
+name: Local contract checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  local:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - run: python -m pip install -r requirements.lock
+      - run: python -m pip install --no-deps -e .
+      - run: python -m pytest -q --basetemp=pytest-cache-files-ci
+      - run: python -m ruff check .
+      - run: python -m ruff format --check .
+      - run: python -m mypy evaluation platforms
+      - run: python scripts/build_schemas.py --check
+      - run: python -m evaluation.cli verify-release data/synthetic/SYNTHETIC-001 --allow-synthetic

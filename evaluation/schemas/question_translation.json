@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:question_translation",
+  "type": "object",
+  "properties": {
+    "question_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "const": "documentation"
+    },
+    "scored": {
+      "const": false
+    }
+  },
+  "required": [
+    "question_id",
+    "language",
+    "text",
+    "purpose",
+    "scored"
+  ],
+  "additionalProperties": false
+}

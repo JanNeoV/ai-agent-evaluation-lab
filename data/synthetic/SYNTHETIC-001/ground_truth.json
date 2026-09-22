@@ -1,0 +1,786 @@
+[
+  {
+    "question_id": "SYN-Q01",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "display_name"
+      ],
+      "rows": [
+        [
+          "Fiktiver See"
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT display_name FROM event WHERE race_id='SYN-1'",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q02",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "event_year"
+      ],
+      "rows": [
+        [
+          2021
+        ],
+        [
+          2023
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT event_year FROM event_year WHERE race_id='SYN-3' ORDER BY event_year",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q03",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "scheduled",
+        "held"
+      ],
+      "rows": [
+        [
+          true,
+          false
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT scheduled, held FROM event_year WHERE race_id='SYN-2' AND event_year=2021",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q04",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "race_id"
+      ],
+      "rows": [
+        [
+          "SYN-4"
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT race_id FROM event_year WHERE event_year=2023 AND abnormal_termination IS TRUE",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q05",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "observation_count"
+      ],
+      "rows": [
+        [
+          11
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT COUNT(*) AS observation_count FROM event_year",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q06",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "state_code",
+        "identities"
+      ],
+      "rows": [
+        [
+          "DE-SH",
+          2
+        ],
+        [
+          "DE-BW",
+          2
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT state_code, COUNT(DISTINCT race_id) AS identities FROM event_year GROUP BY state_code",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q07",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "event_year",
+        "listed_count"
+      ],
+      "rows": [
+        [
+          2021,
+          3
+        ],
+        [
+          2022,
+          3
+        ],
+        [
+          2023,
+          4
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT event_year, COUNT(*) AS listed_count FROM event_year WHERE scheduled IS TRUE GROUP BY event_year",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q08",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "state_code",
+        "observation_count"
+      ],
+      "rows": [
+        [
+          "DE-BW",
+          6
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT state_code, COUNT(*) AS observation_count FROM event_year GROUP BY state_code HAVING COUNT(*)>5",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q09",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "difference"
+      ],
+      "rows": [
+        [
+          -1
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT SUM(CASE WHEN event_year=2022 THEN 1 ELSE 0 END)-SUM(CASE WHEN event_year=2021 THEN 1 ELSE 0 END) AS difference FROM event_year",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q10",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "event_year"
+      ],
+      "rows": [
+        [
+          2021
+        ],
+        [
+          2023
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT event_year FROM event_year WHERE race_id='SYN-1' AND held IS TRUE",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q11",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "race_id"
+      ],
+      "rows": [
+        [
+          "SYN-1"
+        ],
+        [
+          "SYN-2"
+        ],
+        [
+          "SYN-3"
+        ],
+        [
+          "SYN-4"
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT a.race_id FROM event_year a JOIN event_year b ON a.race_id=b.race_id WHERE a.event_year=2021 AND b.event_year=2023",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q12",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "race_id",
+        "first_year",
+        "last_year"
+      ],
+      "rows": [
+        [
+          "SYN-3",
+          2021,
+          2023
+        ],
+        [
+          "SYN-2",
+          2021,
+          2023
+        ],
+        [
+          "SYN-4",
+          2021,
+          2023
+        ],
+        [
+          "SYN-1",
+          2021,
+          2023
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT race_id, MIN(event_year) AS first_year, MAX(event_year) AS last_year FROM event_year GROUP BY race_id",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q13",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "race_id",
+        "n"
+      ],
+      "rows": [
+        [
+          "SYN-1",
+          3
+        ],
+        [
+          "SYN-4",
+          3
+        ],
+        [
+          "SYN-2",
+          3
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "WITH c AS (SELECT race_id, COUNT(*) AS n FROM event_year GROUP BY race_id) SELECT race_id,n FROM c WHERE n=(SELECT MAX(n) FROM c)",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q14",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "share"
+      ],
+      "rows": [
+        [
+          0.25
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT CAST(SUM(CASE WHEN held IS TRUE THEN 1 ELSE 0 END) AS DOUBLE)/COUNT(*) AS share FROM event_year WHERE event_year=2021",
+    "ordered": false,
+    "tolerances": {
+      "share": "0.000001"
+    },
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q15",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "state_code",
+        "n"
+      ],
+      "rows": [
+        [
+          "DE-BW",
+          6
+        ],
+        [
+          "DE-SH",
+          5
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT state_code,COUNT(*) AS n FROM event_year GROUP BY state_code ORDER BY n DESC,state_code",
+    "ordered": true,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q16",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "share"
+      ],
+      "rows": [
+        [
+          0.8
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT CAST(SUM(CASE WHEN held IS NOT NULL THEN 1 ELSE 0 END) AS DOUBLE)/COUNT(*) AS share FROM event_year WHERE scheduled IS TRUE",
+    "ordered": false,
+    "tolerances": {
+      "share": "0.000001"
+    },
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q17",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "unknown_count"
+      ],
+      "rows": [
+        [
+          3
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT COUNT(*) AS unknown_count FROM event_year WHERE held IS NULL",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q18",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "verified_false_count"
+      ],
+      "rows": [
+        [
+          2
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT COUNT(*) AS verified_false_count FROM event_year WHERE held IS FALSE",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q19",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "held"
+      ],
+      "rows": [
+        [
+          null
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT held FROM event_year WHERE race_id='SYN-1' AND event_year=2022",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q20",
+    "expected": {
+      "status": "abstain",
+      "columns": [],
+      "rows": [],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": null,
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q21",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "evidence_id"
+      ],
+      "rows": [
+        [
+          "E-1-2021-held"
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [
+        "E-1-2021-held"
+      ],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT evidence_id FROM observation_source WHERE race_id='SYN-1' AND event_year=2021 AND field_name='held'",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [
+      [
+        "E-1-2021-held"
+      ]
+    ],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q22",
+    "expected": {
+      "status": "abstain",
+      "columns": [],
+      "rows": [],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": null,
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q23",
+    "expected": {
+      "status": "abstain",
+      "columns": [],
+      "rows": [],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": null,
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  },
+  {
+    "question_id": "SYN-Q24",
+    "expected": {
+      "status": "answered",
+      "columns": [
+        "calendar_coverage",
+        "held_verification_coverage"
+      ],
+      "rows": [
+        [
+          "partial",
+          "partial"
+        ]
+      ],
+      "units": {},
+      "caveats": [
+        "synthetic_fixture_only",
+        "benchmark_subset_only"
+      ],
+      "evidence_ids": [],
+      "explanation_de": "Synthetische Testantwort; keine Aussage über reale Veranstaltungen."
+    },
+    "oracle_sql": "SELECT calendar_coverage,held_verification_coverage FROM coverage WHERE state_code='DE-SH' AND event_year=2022",
+    "ordered": false,
+    "tolerances": {},
+    "evidence_alternatives": [],
+    "prohibited_claims": [
+      "national_representativeness",
+      "causal_effect"
+    ],
+    "reviewer": "synthetic_fixture_programmatic_crosscheck"
+  }
+]

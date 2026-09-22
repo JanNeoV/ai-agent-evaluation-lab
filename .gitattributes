@@ -1,0 +1,3 @@
+* text eol=lf
+# Frozen release files retain their original bytes and manifest hashes on every OS.
+data/synthetic/** -text whitespace=cr-at-eol

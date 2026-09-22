@@ -1,0 +1,20 @@
+{
+  "template_only": true,
+  "campaign": "OUTSIDE_DEVELOPER_CHECKOUT/campaign",
+  "split": "TEST",
+  "sealed_payload": "OUTSIDE_DEVELOPER_CHECKOUT/test.enc",
+  "key_file": "OUTSIDE_DEVELOPER_CHECKOUT/evaluator.key",
+  "deployments": "OUTSIDE_DEVELOPER_CHECKOUT/campaign/candidate_bundle.json",
+  "budget_ledger": "OUTSIDE_DEVELOPER_CHECKOUT/usage/budget.jsonl",
+  "batch_id": "EXP-0001-TEST",
+  "output": "OUTSIDE_DEVELOPER_CHECKOUT/EXP-0001/TEST",
+  "per_invocation_upper_usd": "FILL_FROM_PREFLIGHT",
+  "warehouse_usd": "FILL_FROM_PREFLIGHT",
+  "judge_usd": "0",
+  "uncertainty_multiplier": "1.25",
+  "rate_card_sha256": "FILL_FROM_RATE_CARD_ARTIFACT",
+  "trial_remaining_usd": "FILL_FROM_TRIAL_BALANCE",
+  "balance_observed_at": "FILL_UTC_TIMESTAMP",
+  "trial_expires_at": "FILL_UTC_TIMESTAMP",
+  "future_required_usd": "FILL_FROM_HOLDOUT_AND_MONITORING_RESERVE"
+}

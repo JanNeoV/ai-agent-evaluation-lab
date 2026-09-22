@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:benchmark_release",
+  "type": "object",
+  "properties": {
+    "release_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "synthetic_fixture",
+        "real_benchmark"
+      ]
+    },
+    "publication_disposition": {
+      "type": "string",
+      "enum": [
+        "synthetic_only",
+        "approved",
+        "blocked"
+      ]
+    },
+    "files": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "selection_rule_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_snapshot_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "frozen_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "review_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "release_id",
+    "schema_version",
+    "classification",
+    "publication_disposition",
+    "files",
+    "selection_rule_sha256",
+    "source_snapshot_refs",
+    "frozen_at",
+    "review_ref"
+  ],
+  "additionalProperties": false
+}

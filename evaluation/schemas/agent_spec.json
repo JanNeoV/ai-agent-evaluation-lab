@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:agent_spec",
+  "type": "object",
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "intervention": {
+      "type": "string",
+      "enum": [
+        "cold_start",
+        "semantics",
+        "instructions",
+        "model",
+        "config"
+      ]
+    },
+    "instructions": {
+      "type": "object"
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "semantic_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "model_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "limits": {
+      "type": "object"
+    },
+    "output_contract_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "candidate_id",
+    "parent_id",
+    "intervention",
+    "instructions",
+    "tools",
+    "semantic_sha256",
+    "model_bindings",
+    "limits",
+    "output_contract_sha256"
+  ],
+  "additionalProperties": false
+}

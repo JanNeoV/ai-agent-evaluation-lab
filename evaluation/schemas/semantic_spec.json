@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-lab:1:semantic_spec",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "measures": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "null_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "descriptions": {
+      "type": "object"
+    },
+    "synonyms": {
+      "type": "object"
+    },
+    "train_examples": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "version",
+    "entities",
+    "relationships",
+    "dimensions",
+    "measures",
+    "null_policy",
+    "descriptions",
+    "synonyms",
+    "train_examples"
+  ],
+  "additionalProperties": false
+}
