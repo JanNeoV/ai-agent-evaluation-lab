@@ -1,6 +1,14 @@
 # AI Agent Evaluation Lab
 
-A public reference implementation for evaluating analytical AI agents with a strict boundary between development feedback and evidence from unseen questions. The repository includes an offline synthetic lifecycle and documentation of a completed Snowflake Cortex proof of concept.
+**Does an analytical AI agent produce correct answers, or merely valid JSON?**
+
+A public research harness for evaluating analytical agents with sealed evaluation stages, deterministic scoring, evidence checks, and explicit cost budgets. The repository includes a fully offline **synthetic** evaluation workflow and a documented, small Snowflake Cortex proof of concept.
+
+**Key observation:** In the captured experiment, all four configurations scored **0/10 strict TEST acceptance** even as structural JSON validity improved. This is a bounded result, not a general model ranking; the original private campaign inputs and responses are not distributed.
+
+**Start here:** [Run the offline demo](docs/quickstart.md) · [Inspect the results](docs/results.md) · [Read the methodology](docs/methodology.md) · [Understand the evidence limits](docs/reproduction.md)
+
+**Related work:** [Power BI semantic assurance](https://github.com/JanNeoV/pbi-osi-converter) · [Technical articles](https://medium.com/@jan.busse)
 
 ## Why this exists
 
